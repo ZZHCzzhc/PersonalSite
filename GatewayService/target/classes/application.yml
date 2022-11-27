@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: gateway-service
+
+  cloud:
+    gateway:
+      routes:
+#        - id: hr-service
+#          uri: lb://hr-service
+#          predicates:
+#            - Path=/hr-service/**
+#        - id: user-service
+#          uri: lb://user-service
+#          predicates:
+#            - Path=/user-service/**
+server:
+  port: 8080
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
